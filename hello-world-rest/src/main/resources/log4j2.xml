@@ -2,14 +2,14 @@
 <Configuration status="info" packages="org.graylog2.log4j2">
     <Appenders>
         <!-- localhost:12201-->
-        <GELF name="gelfAppender" server="127.0.0.1" port="12201" queueSize="1" />
+        <!--<GELF name="gelfAppender" server="127.0.0.1" port="12201" queueSize="1" />-->
         <Console name="STDOUT" target="SYSTEM_OUT">
             <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%level] [%thread] [%c{1.}] - %m%n"/>
         </Console>
     </Appenders>
     <Loggers>
         <Root level="info">
-            <AppenderRef ref="gelfAppender"/>
+           <!-- <AppenderRef ref="gelfAppender"/>-->
             <AppenderRef ref="STDOUT"/>
         </Root>
     </Loggers>

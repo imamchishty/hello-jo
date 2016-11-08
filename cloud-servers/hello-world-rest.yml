@@ -10,7 +10,7 @@ hello.message: Hello
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8071/eureka/
+      defaultZone: http://192.168.11.1:8071/eureka/
   instance:
     status-page-url: ${management.contextPath}/info
     health-check-url-path: ${management.contextPath}/health
@@ -30,8 +30,8 @@ trace.interceptor.endpoint: requests
 # Please remove this setting - added for demo, see AccountClient
 account.service.name: ${spring.application.name}
 
-#spring.zipkin.baseUrl: localhost:9411
-#spring.sleuth.keys.http.headers
+spring.zipkin.baseUrl: 192.168.11.1:9411
+# spring.sleuth.keys.http.headers
 
 ---
 spring:
